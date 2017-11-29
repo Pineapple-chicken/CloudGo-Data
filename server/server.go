@@ -32,3 +32,4 @@ func testHandler(formatter *render.Render) http.HandlerFunc {
 		formatter.JSON(w, http.StatusOK, struct{ Test string }{"Hello " + id})
 	}
 }
+
