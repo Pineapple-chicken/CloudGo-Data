@@ -1,25 +1,25 @@
-package entities
+package main
 
 import (
-	"time"
+	"os"
+	"github.com/Pineapple-chicken/Xorm-demo/server"
+	flag "github.com/spf13/pflag"
 )
 
-// UserInfo .
-type UserInfo struct {
-	UID        int `xorm:"id pk autoincr"`
-	UserName   string
-	DepartName string
-	CreateAt   *time.Time
-}
+const (
+	PORT string = "8080"
+)
 
-// NewUserInfo .
-func NewUserInfo(u UserInfo) *UserInfo {
-	if len(u.UserName) == 0 {
-		panic("UserName shold not null!")
+func main() {
+	port := os.Getenv("PORT")
+	if len(port) == 0 {
+		port = PORT
 	}
-	if u.CreateAt == nil {
-		t := time.Now()
-		u.CreateAt = &t
+	pPort := flag.StringP("port", "p", PORT, "PORT for httpd listening")
+	flag.Parse()
+	if len(*pPort) != 0 {
+		port = *pPort
 	}
-	return &u
+	server := service.NewServer()
+	server.Run(":" + port)
 }
