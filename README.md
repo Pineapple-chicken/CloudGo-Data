@@ -58,3 +58,5 @@ Percentage of the requests served within a certain time (ms)
   99%     20
  100%     20 (longest request)
 ```
+
+通过与database/sql的测试结果比较可知，两者性能表现为，使用database/sql要比使用xorm要快一些。
