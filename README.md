@@ -8,8 +8,10 @@ Assignment for service computing : Xorm-demo
 
 在原有的代码上进行了一些细节修改。
 
+
 ## orm 是否就是实现了dao的自动化？
 对于数据库操作，orm不再需要自己写SQL代码，而是自动生成SQL代码，是实现了dao的自动化。
+
 
 ## 使用 ab 测试性能
 ```shell
