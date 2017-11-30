@@ -1,5 +1,5 @@
-# Xorm-demo
-Assignment for service computing : Xorm-demo
+# CloudGo-Data
+Assignment for service computing : CloudGo-Data
 
 ## 使用 xorm 实现老师博客中的程序
 老师博客地址：<code>http://blog.csdn.net/pmlpml/article/details/78602290</code>
